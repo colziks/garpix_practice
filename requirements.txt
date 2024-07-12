@@ -1,0 +1,6 @@
+pandas
+django
+flake8
+radon
+bandit
+coverage
