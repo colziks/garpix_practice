@@ -1,13 +1,21 @@
-# Praktika Task
+# Проект по распределению педагогической нагрузки
 
-This repository contains the code for the praktika task, which includes a function to identify the minimal set of features that uniquely identify entities in a dataset.
+## Описание
 
-## Files
+Этот проект предназначен для анализа и определения минимального набора признаков, которые уникально идентифицируют записи в данных о распределении педагогической нагрузки. Данные хранятся в формате JSON и содержат информацию о нагрузке различных педагогов.
 
-- `app.py`: Contains the main function that processes the JSON input and returns the minimal set of features.
-- `test_app.py`: Contains unit tests for the main function.
+## Структура проекта
 
-## How to Run
+- `app.py`: Основной файл приложения, содержащий логику анализа данных.
+- `test_app.py`: Тесты для проверки корректности работы приложения.
+- `README.md`: Документация проекта.
+- `requirements.txt`: Зависимости проекта.
+- `example.json`: Пример файла данных.
+- `распределение-педагогической-нагрузки.json`: Файл с тестовыми данными.
 
-```bash
-python app.py
+## Установка
+
+1. Склонируйте репозиторий
+2. Установка зависимостей
+   pip install -r requirements.txt
+
