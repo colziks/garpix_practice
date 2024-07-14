@@ -10,11 +10,19 @@ def main(json_string):
         for combination in itertools.combinations(keys, i):
             identifiers = {tuple(entity[key] for key in combination) for entity in data}
             if len(identifiers) == len(data):
-                result_df = pd.DataFrame(combination, columns=["Feature"])
+                result_df = pd.DataFrame([entity for entity in data], columns=combination)
                 return result_df.to_csv(index=False)
 
     return ""
 
 if __name__ == "__main__":
-    example_json = '[{"id": 1, "name": "Alice", "age": 30}, {"id": 2, "name": "Bob", "age": 25}]'
-    print(main(example_json))
+    # Открываем и читаем файл 'распределение-педагогической-нагрузки.json'
+    with open('распределение-педагогической-нагрузки.json', 'r', encoding='utf-8') as file:
+        json_data = file.read()
+    
+    # Запускаем функцию main с данными из файла
+    result_csv = main(json_data)
+    
+    # Записываем результат в файл 'result.csv'
+    with open('result.csv', 'w', encoding='utf-8') as file:
+        file.write(result_csv)
