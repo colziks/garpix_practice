@@ -80,7 +80,11 @@ print(identifiers)  # Output: "name,age"
 save_result_to_csv(identifiers)
 ```
 ### Основные функции
- - load_data_from_json(file_path: str) -> List[Dict]: Загрузка данных из JSON-файла.
-- get_attribute_frequency(data: List[Dict]) -> List[Tuple[str, Set]]: Вычисление частоты атрибутов.
-- determine_minimal_identifiers(data: List[Dict]) -> str: Определение минимального набора идентификаторов.
-- save_result_to_csv(identifiers: str): Сохранение результата в CSV-файл.
+ - `load_data_from_json(file_path: str) -> List[Dict]`: Загрузка данных из JSON-файла.
+- `get_attribute_frequency(data: List[Dict]) -> List[Tuple[str, Set]]`: Вычисление частоты атрибутов.
+- `determine_minimal_identifiers(data: List[Dict]) -> str`: Определение минимального набора идентификаторов.
+- `save_result_to_csv(identifiers: str)`: Сохранение результата в CSV-файл.
+  ### Пример запуска:
+- Загрузите данные из файла JSON, используя функцию `load_data_from_json`.
+- Определите минимальный набор атрибутов с помощью функции `determine_minimal_identifiers`.
+- Сохраните результат в файл CSV с помощью функции `save_result_to_csv`.
